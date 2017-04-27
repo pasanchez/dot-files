@@ -1,6 +1,6 @@
 # dot-files
 
-Vim and ZSH configuration files. Heavily simplified version of [amacgregor](https://github.com/amacgregor/dot-files) dot-files repo.
+Vim and ZSH configuration files. Heavily simplified version of [amacgregor dot-files repo](https://github.com/amacgregor/dot-files) .
 
 
 
