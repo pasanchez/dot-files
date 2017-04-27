@@ -1,2 +1,6 @@
 # dot-files
-Some linux config fiels
+
+Vim and ZSH configuration files. Heavily simplified version of (amacgregor)[https://github.com/amacgregor/dot-files].
+
+
+
