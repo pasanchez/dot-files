@@ -1,6 +1,7 @@
 set encoding=utf8
 set guifont=Monospace\ 16
 """" START Vundle Configuration 
+set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲
 
 " Disable file type for vundle
 filetype off                  " required
