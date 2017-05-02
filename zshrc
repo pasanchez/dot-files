@@ -21,6 +21,7 @@ plugins=(git command-not-found gradle pip python sudo web-search wd)
 
 source $ZSH/oh-my-zsh.sh
 
+DISABLE_CORRECTION="true"
 ###################################
 #          ALIASES                #
 ###################################
