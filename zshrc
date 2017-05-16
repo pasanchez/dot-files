@@ -15,7 +15,7 @@ export ZSH=/home/pablo/.oh-my-zsh
 
 ZSH_THEME="avit"
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 plugins=(git command-not-found gradle pip python sudo web-search wd)
 
@@ -26,7 +26,7 @@ DISABLE_CORRECTION="true"
 #          ALIASES                #
 ###################################
 
-
+alias server="ssh server -t tmux a"
 
 ###################################
 #          FZF CONFIG             #
