@@ -21,10 +21,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+
 " Generic Programming Support 
 Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'Townk/vim-autoclose'
-Plugin 'davidhalter/jedi-vim'
 
 " Markdown / Writting
 Plugin 'tpope/vim-markdown'
@@ -98,6 +98,11 @@ noremap <C-t> :FZF<CR>
 " Leader Mappings
 let mapleader = ","
 
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 " FZF config
 
 "" This is the default extra key bindings
@@ -134,3 +139,6 @@ let g:fzf_colors =
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+"Run python script from vim
+autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellscape(@%, 1) <CR>
