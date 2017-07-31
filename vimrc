@@ -1,3 +1,6 @@
+""""" Nvim fix for terminator:
+set guicursor=
+
 set encoding=utf8
 set guifont=Monospace\ 16
 
@@ -15,13 +18,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Utility
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-
+Plugin 'davidhalter/jedi-vim'
 " Generic Programming Support 
 Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'Townk/vim-autoclose'
@@ -93,10 +96,19 @@ let g:jedi#force_py_version = 3
 """""""""""""""""""""""""""""""""""""
 " Mappings configurationn
 """""""""""""""""""""""""""""""""""""
-noremap <C-n> :NERDTreeToggle<CR>
-noremap <C-t> :FZF<CR>
 " Leader Mappings
 let mapleader = ","
+
+" ctrl-tab next tab:
+nnoremap <leader>j :tabnext<CR>
+nnoremap <leader>k :tabprevious<CR>
+
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+
+noremap <C-n> :NERDTreeToggle<CR>
+noremap <C-t> :FZF<CR>
 
 " Disable arrow keys
 noremap <Up> <NOP>
@@ -141,4 +153,4 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 "Run python script from vim
-autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellscape(@%, 1) <CR>
+autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1) <CR>

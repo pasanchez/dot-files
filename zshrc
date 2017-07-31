@@ -26,8 +26,12 @@ DISABLE_CORRECTION="true"
 #          ALIASES                #
 ###################################
 
-alias server="ssh server -t tmux a"
+alias server="ssh -Y server -t tmux a"
+alias diabetes_server="ssh -Y diabetes_server -t tmux a"
+alias gbuild="./gradlew build"
+alias grun="./gradlew run"
 
+alias ros="source ~/ros/devel/setup.zsh"
 ###################################
 #          FZF CONFIG             #
 ###################################
