@@ -94,20 +94,23 @@ augroup END
 let g:jedi#force_py_version = 3
 
 """""""""""""""""""""""""""""""""""""
-" Mappings configurationn
+">> Mappings configurationn
 """""""""""""""""""""""""""""""""""""
 " Leader Mappings
 let mapleader = ","
 
-" ctrl-tab next tab:
+"tabs:
 nnoremap <leader>j :tabnext<CR>
 nnoremap <leader>k :tabprevious<CR>
+
+" pop tag:
+nnoremap <C-[> :pop<CR>
+
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 
-noremap <C-n> :NERDTreeToggle<CR>
 noremap <C-t> :FZF<CR>
 
 " Disable arrow keys

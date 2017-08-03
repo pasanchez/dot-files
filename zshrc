@@ -22,16 +22,24 @@ plugins=(git command-not-found gradle pip python sudo web-search wd)
 source $ZSH/oh-my-zsh.sh
 
 DISABLE_CORRECTION="true"
+
 ###################################
 #          ALIASES                #
 ###################################
 
-alias server="ssh -Y server -t tmux a"
-alias diabetes_server="ssh -Y diabetes_server -t tmux a"
 alias gbuild="./gradlew build"
 alias grun="./gradlew run"
-
 alias ros="source ~/ros/devel/setup.zsh"
+
+###################################
+#          FUNCTIONS              #
+###################################
+
+function tssh(){
+    ssh -Y "$1" -t tmux a
+}
+
+
 ###################################
 #          FZF CONFIG             #
 ###################################
