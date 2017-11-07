@@ -4,8 +4,9 @@ set guicursor=
 set encoding=utf8
 set guifont=Monospace\ 16
 
-"""" START Vundle Configuration 
 set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲
+
+"""" START Vundle Configuration 
 
 " Disable file type for vundle
 filetype off                  " required
@@ -19,26 +20,20 @@ Plugin 'gmarik/Vundle.vim'
 
 " Utility
 " Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-surround'
-Plugin 'ervandew/supertab'
+"Plugin 'godlygeek/tabular'
+"Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-Plugin 'davidhalter/jedi-vim'
-" Generic Programming Support 
-Plugin 'jakedouglas/exuberant-ctags'
-Plugin 'Townk/vim-autoclose'
-
-" Markdown / Writting
-Plugin 'tpope/vim-markdown'
-Plugin 'jtratner/vim-flavored-markdown'
-
-" Theme / Interface
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'davidhalter/jedi-vim'
+"" Generic Programming Support 
+"Plugin 'Townk/vim-autoclose'
+"
+"" Theme / Interface
+"Plugin 'ryanoasis/vim-devicons'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ajh17/Spacegray.vim'
-
+"
 call vundle#end()            " required
 filetype plugin indent on    " required
 """" END Vundle Configuration 
@@ -50,7 +45,7 @@ filetype plugin indent on    " required
 set number
 
 " mouse scroll
-:set mouse=a
+set mouse=a
 
 " Set Proper Tabs
 set tabstop=4
@@ -77,18 +72,12 @@ colorscheme spacegray
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
-" Vim-Airline Configuration
+"" Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1 
 let g:airline_theme='hybrid'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
-
-" Markdown Syntax Support
-augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
 
 " jedi-vim configuration
 let g:jedi#force_py_version = 3
@@ -103,21 +92,12 @@ let mapleader = ","
 nnoremap <leader>j :tabnext<CR>
 nnoremap <leader>k :tabprevious<CR>
 
-" pop tag:
-nnoremap <C-[> :pop<CR>
-
-
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 
 noremap <C-t> :FZF<CR>
 
-" Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 " FZF config
 
 "" This is the default extra key bindings

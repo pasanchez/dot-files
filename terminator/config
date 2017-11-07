@@ -20,11 +20,10 @@
 [profiles]
   [[default]]
     background_color = "#121212"
-    background_image = None
+    cursor_color = "#d3d7cf"
     custom_command = /usr/bin/zsh
-    font = Monospace 18
+    font = Monospace 14
     foreground_color = "#d3d7cf"
-    scroll_on_output = False
     scrollback_lines = 2000
     use_custom_command = True
     use_system_font = False

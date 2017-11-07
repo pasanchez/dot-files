@@ -8,7 +8,6 @@ export LD_LIBRARY_PATH=/home/pablo/ride/lib/
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.5
 export ZSH=/home/pablo/.oh-my-zsh
 
-
 ###################################
 #          ZSH CONFIG             #
 ###################################
