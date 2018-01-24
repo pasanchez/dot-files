@@ -1,10 +1,12 @@
 ###################################
 #          ENVIROMENT             #
+source /opt/ros/indigo/setup.zsh
+source /home/pablo/catkin_ws/devel/setup.zsh
 ###################################
 export RIDE_PATH=/home/pablo/ride
 export PATH=$PATH:/home/pablo/ride/bin/
 export CLASSPATH=$CLASSPATH:/home/pablo/ride/class/
-export LD_LIBRARY_PATH=/home/pablo/ride/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/pablo/ride/lib/
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.5
 export ZSH=/home/pablo/.oh-my-zsh
 
@@ -28,8 +30,7 @@ DISABLE_CORRECTION="true"
 
 alias gbuild="./gradlew build"
 alias grun="./gradlew run"
-alias ros="source ~/ros/devel/setup.zsh"
-
+alias vrep="~/vrep-install/vrep.sh ~/smartelderlycar/vrep/main_scene.ttt"
 ###################################
 #          FUNCTIONS              #
 ###################################
