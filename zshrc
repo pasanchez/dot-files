@@ -1,7 +1,7 @@
 ###################################
 #          ENVIROMENT             #
 source /opt/ros/indigo/setup.zsh
-source /home/pablo/catkin_ws/devel/setup.zsh
+source /home/pablo/sec_ws/devel/setup.zsh
 ###################################
 export RIDE_PATH=/home/pablo/ride
 export PATH=$PATH:/home/pablo/ride/bin/
@@ -30,7 +30,8 @@ DISABLE_CORRECTION="true"
 
 alias gbuild="./gradlew build"
 alias grun="./gradlew run"
-alias vrep="~/vrep-install/vrep.sh ~/smartelderlycar/vrep/main_scene.ttt"
+alias vrep="~/V-REP_PRO_EDU_V3_4_0_Linux/vrep.sh ~/smartelderlycar/vrep/main_scene.ttt"
+
 ###################################
 #          FUNCTIONS              #
 ###################################

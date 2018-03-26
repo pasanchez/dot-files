@@ -1,3 +1,9 @@
+"GVIM remove toolbars
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
+":set lines=999 columns=999
 """"" Nvim fix for terminator:
 set guicursor=
 
@@ -24,6 +30,8 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
 "Plugin 'davidhalter/jedi-vim'
 "" Generic Programming Support 
 "Plugin 'Townk/vim-autoclose'
@@ -86,7 +94,7 @@ let g:jedi#force_py_version = 3
 ">> Mappings configurationn
 """""""""""""""""""""""""""""""""""""
 " Leader Mappings
-let mapleader = ","
+let mapleader = " "
 
 "tabs:
 nnoremap <leader>j :tabnext<CR>
@@ -95,10 +103,12 @@ nnoremap <leader>k :tabprevious<CR>
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-
-noremap <C-t> :FZF<CR>
+" NerdTree
+map <leader>n :NERDTreeToggle<CR>
 
 " FZF config
+
+noremap <leader><leader> :FZF<CR>
 
 "" This is the default extra key bindings
 let g:fzf_action = {
